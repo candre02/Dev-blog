@@ -1,0 +1,35 @@
+:root {
+    --primary: #ebebeb;
+    --secondary: #19543dc4;
+    --tertiary: #6c6b67;
+}
+
+body {
+    font-family: Arial;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+    background-color: var(--primary);
+}
+
+header {
+    padding: 60px;
+    text-align: center;
+    background: var(--secondary);
+    color: var(--primary);  
+}
+/* 
+main {
+
+}
+
+aside {
+
+}
+
+nav {
+
+} */
+
