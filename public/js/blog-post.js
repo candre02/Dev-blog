@@ -26,5 +26,5 @@ async function blogFormHandler(event) {
     }
   }
   
-  document.querySelector('.blog-form').addEventListener('submit', blogFormHandler);
+  document.querySelector('.blog-post-form').addEventListener('submit', blogFormHandler);
   
