@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Blog } = require('../../models');
 
-// Get all comments
+// Get all Blogs
 router.get('/', (req, res) => {
   Blog.findAll()
     .then(dbBlogData => res.json(dbBlogData))
@@ -13,10 +13,10 @@ router.get('/', (req, res) => {
 
 // Post: create new blogs
 router.post('/', (req, res) => {
-  // expects => {blog_text: "This is the comment", user_id: 1, post_id: 2}
+  // expects => {blog_text: "This is the blog", user_id: 1, post_id: 2}
   if (req.session) {
     Blog.create({
-      blog_text: req.body.comment_text,
+      blog_text: req.body.blog_text,
       user_id: req.session.user_id,
       post_id: req.body.post_id
     })

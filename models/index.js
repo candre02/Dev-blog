@@ -1,7 +1,7 @@
 // import all models
 const Post = require('./Post');
 const User = require('./User');
-const Comment = require('./Comment');
+const Blog = require('./Blog');
 
 
 
@@ -14,20 +14,20 @@ Post.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-Comment.belongsTo(User, {
+Blog.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-Comment.belongsTo(Post, {
+Blog.belongsTo(Post, {
     foreignKey: 'post_id'
 });
 
-User.hasMany(Comment, {
+User.hasMany(Blog, {
     foreignKey: 'user_id'
 });
 
-Post.hasMany(Comment, {
+Post.hasMany(Blog, {
     foreignKey: 'post_id'
 });
 
-module.exports = { User, Post, Comment };
+module.exports = { User, Post, Blog };
