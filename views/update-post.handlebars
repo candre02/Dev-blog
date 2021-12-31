@@ -1,0 +1,35 @@
+<article>
+  <a href="/dashboard"> &larr; Back to dashboard</a>
+  <h2>
+    Update Post
+  </h2>
+  <form class="update-post-form">
+    <div>
+      <input name="post-title" type="text" value="{{post.title}}" />
+      <span>({{format_url post.post_url}})</span>
+    </div>
+    <div>
+      {{!-- {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}} --}}
+      |
+      <a href="/post/{{post.id}}">{{post.blogs.length}} {{format_plural "blog" post.blogs.length}}</a>
+    </div>
+    <button type="submit">Submit</button>
+    <button type="button" class="delete-post-btn">Delete</button>
+  </form>
+</article>
+
+<form class="blog-form">
+  <div>
+    <textarea name="blog-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">add blog</button>
+  </div>
+</form>
+
+{{> blogs post.blogs}}
+
+<script src="/js/update-post.js"></script>
+<script src="/js/delete-post.js"></script>
+<script src="/js/blog-post.js"></script>
