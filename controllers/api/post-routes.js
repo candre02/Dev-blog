@@ -2,6 +2,7 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { User, Post, Blog } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // Get all posts
 router.get('/', (req, res) => {
@@ -16,15 +17,17 @@ router.get('/', (req, res) => {
       include: [
         {
           model: Blog,
-          attributes: ['id', 'blog_text', 'post_id', 'user_id', 'created_at'],
+          attributes: [
+            'id', 
+            'blog_text', 
+            'post_id', 
+            'user_id', 
+            'created_at'
+          ],
           include: {
             model: User,
             attributes: ['username']
           }
-        },
-        {
-          model: User,
-          attributes: ['username']
         }
       ]
     })
@@ -35,8 +38,8 @@ router.get('/', (req, res) => {
       });
   });
 
-  // Get by a single id
-  router.post('/', (req, res) => {
+  // Create a new post
+  router.post('/', withAuth, (req, res) => {
     if (req.session) {
         Post.create({
           title: req.body.title,
@@ -51,7 +54,7 @@ router.get('/', (req, res) => {
         }
   });
 
-  // Update by its id
+  // Update post by its id
 router.put('/:id', (req, res) => {
     Post.update(
       {
@@ -76,7 +79,7 @@ router.put('/:id', (req, res) => {
       });
   });
 
-  // Delete by its id
+  // Delete post by its id
   router.delete('/:id', (req, res) => {
     console.log('id', req.params.id);
     Post.destroy({
