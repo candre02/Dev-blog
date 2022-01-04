@@ -1,6 +1,6 @@
 // import files
 const router = require('express').Router();
-const sequelize = require('../config/connection');
+// const sequelize = require('../config/connection');
 const { Post, User, Blog } = require('../models');
 
 // get all posts for homepage
@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
     Post.findAll({
       attributes: [
         'id',
-        'post_url',
+        'content',
         'title',
         'created_at'
       ],
@@ -30,16 +30,15 @@ router.get('/', (req, res) => {
     })
       .then(dbPostData => {
         const posts = dbPostData.map(post => post.get({ plain: true }));
-  
+  console.log(posts)
         res.render('home', {
-          posts,
-          loggedIn: req.session.loggedIn
+          posts
         });
       })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });
+      // .catch(err => {
+      //   console.log(err);
+      //   res.status(500).json(err);
+      // });
   });
 
   // get single post
@@ -50,14 +49,20 @@ router.get('/', (req, res) => {
       },
       attributes: [
         'id',
-        'post_url',
+        'content',
         'title',
         'created_at'
       ],
       include: [
         {
           model: Blog,
-          attributes: ['id', 'blog_text', 'post_id', 'user_id', 'created_at'],
+          attributes: [
+            'id', 
+            'blog_text', 
+            'post_id', 
+            'user_id', 
+            'created_at'
+          ],
           include: {
             model: User,
             attributes: ['username']

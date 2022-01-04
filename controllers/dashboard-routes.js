@@ -14,14 +14,20 @@ router.get('/', withAuth, (req, res) => {
       },
       attributes: [
         'id',
-        'post_url',
+        'content',
         'title',
         'created_at'
       ],
       include: [
         {
           model: Blog,
-          attributes: ['id', 'blog_text', 'post_id', 'user_id', 'created_at'],
+          attributes: [
+            'id', 
+            'blog_text', 
+            'post_id', 
+            'user_id', 
+            'created_at'
+          ],
           include: {
             model: User,
             attributes: ['username']
@@ -49,14 +55,20 @@ router.get('/update/:id', withAuth, (req, res) => {
     Post.findByPk(req.params.id, {
       attributes: [
         'id',
-        'post_url',
+        'content',
         'title',
         'created_at'
       ],
       include: [
         {
           model: Blog,
-          attributes: ['id', 'blog_text', 'post_id', 'user_id', 'created_at'],
+          attributes: [
+            'id', 
+            'blog_text', 
+            'post_id', 
+            'user_id', 
+            'created_at'
+          ],
           include: {
             model: User,
             attributes: ['username']

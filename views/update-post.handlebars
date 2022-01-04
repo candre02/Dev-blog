@@ -6,12 +6,12 @@
   <form class="update-post-form">
     <div>
       <input name="post-title" type="text" value="{{post.title}}" />
-      <span>({{format_url post.post_url}})</span>
+      <span>({{format_url post.content}})</span>
     </div>
     <div>
-      {{!-- {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}} --}}
+      {{format_plural}} by you on {{format_date post.created_at}}
       |
-      <a href="/post/{{post.id}}">{{post.blogs.length}} {{format_plural "blog" post.blogs.length}}</a>
+      <a href="/post/{{post.id}}">{{post.blogs.length}} {{format_plural  post.blogs.length}}</a>
     </div>
     <button type="submit">Submit</button>
     <button type="button" class="delete-post-btn">Delete</button>

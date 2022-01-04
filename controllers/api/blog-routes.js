@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Blog } = require('../../models');
+const withAuth = require('../../utils/auth');
 
-// Get all Blogs
 router.get('/', (req, res) => {
   Blog.findAll()
     .then(dbBlogData => res.json(dbBlogData))
@@ -11,43 +11,37 @@ router.get('/', (req, res) => {
     });
 });
 
-// Post: create new blogs
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
   // expects => {blog_text: "This is the blog", user_id: 1, post_id: 2}
-  if (req.session) {
-    Blog.create({
-      blog_text: req.body.blog_text,
-      user_id: req.session.user_id,
-      post_id: req.body.post_id
-    })
-      .then(dbBlogData => res.json(dbBlogData))
-      .catch(err => {
-        console.log(err);
-        res.status(400).json(err);
-      });
-  }
+  Blog.create({
+    blog_text: req.body.blog_text,
+    user_id: req.session.user_id,
+    post_id: req.body.post_id
+  })
+    .then(dbBlogData => res.json(dbBlogData))
+    .catch(err => {
+      console.log(err);
+      res.status(400).json(err);
+    });
 });
 
-// DELETE by its id 
-router.delete('/:id', (req, res) => {
-  if (req.session) {
-    Blog.destroy({
-      where: {
-        id: req.params.id
+router.delete('/:id', withAuth, (req, res) => {
+  Blog.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(dbBlogData => {
+      if (!dbBlogData) {
+        res.status(404).json({ message: 'No blog found with this id!' });
+        return;
       }
+      res.json(dbBlogData);
     })
-      .then(dbBlogData => {
-        if (!dbBlogData) {
-          res.status(404).json({ message: 'No blog found with this id!' });
-          return;
-        }
-        res.json(dbBlogData);
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });
-  }
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 module.exports = router;

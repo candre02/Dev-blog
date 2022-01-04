@@ -1,0 +1,19 @@
+{{> post-info post}}
+
+{{#if loggedIn}}
+<form class="blog-form">
+  <div>
+    <textarea name="blog-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">add comment</button>
+  </div>
+</form>
+{{/if}}
+
+{{> blogs post.blogs}}
+
+{{#if loggedIn}}
+<script src="/js/blog.js"></script>
+{{/if}}    
