@@ -54,53 +54,53 @@ const postdata = [
         user_id: 5
     },
     {
-        title: '{{{ body }}}',
-        content: 'Three brackets will render the data as HTML',
+        title: 'What does CRUD mean?',
+        content: 'Create, Read, Update, and Delete',
         user_id: 3
     },
     {
-        title: '{{{ body }}}',
-        content: 'Three brackets will render the data as HTML',
+        title: 'Bcrypt',
+        content: 'hashing function allows us to build a password security platform that scales with computation power and always hashes every password with a salt',
         user_id: 10
     },
     {
-        title: '{{{ body }}}',
-        content: 'Three brackets will render the data as HTML',
+        title: 'Dotenv',
+        content: 'is a zero-dependency module that loads environment variables from a . env file into process.',
         user_id: 8
     },
     {
-        title: '{{{ body }}}',
-        content: 'Three brackets will render the data as HTML',
+        title: 'Express',
+        content: 'Is a back end web application framework for Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs.',
         user_id: 3
     },
     {
-        title: '{{{ body }}}',
-        content: 'Three brackets will render the data as HTML',
+        title: 'MySQL',
+        content: 'Creates a database for storing and manipulating data, defining the relationship of each table.',
         user_id: 3
     },
     {
-        title: '{{{ body }}}',
-        content: 'Three brackets will render the data as HTML',
+        title: 'gitignore',
+        content: 'Tells Git which files to ignore when committing your project to the GitHub repository',
         user_id: 7
     },
     {
-        title: '{{{ body }}}',
-        content: 'Three brackets will render the data as HTML',
+        title: 'Database',
+        content: 'An organized collection of structured information, or data, typically stored electronically in a computer system',
         user_id: 6
     },
     {
-        title: '{{{ body }}}',
-        content: 'Three brackets will render the data as HTML',
+        title: 'node modules',
+        content: 'Can be a single file or a collection of multiples files/folders.',
         user_id: 4
     },
     {
-        title: '{{{ body }}}',
-        content: 'Three brackets will render the data as HTML',
+        title: 'package.json',
+        content: ' It records important metadata about a project which is required before publishing to NPM, and also defines functional attributes of a project that npm uses to install dependencies, run scripts, and identify the entry point to our package.',
         user_id: 6
     },
     {
-        title: '{{{ body }}}',
-        content: 'Three brackets will render the data as HTML',
+        title: 'Jest',
+        content: 'An open-source testing framework built on JavaScript, can be used to validate almost everything around JS, especially the browser rendering of web-applications.',
         user_id: 7
     }
 
