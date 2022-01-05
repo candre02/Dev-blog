@@ -7,22 +7,22 @@
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: #333;
+    color: rgb(157, 231, 172);
   }
   
   a {
     text-decoration: none;
-    color: #225ca3;
+    color: green;
     font-weight: bold;
     transition: color .1s;
   }
   
   a:hover {
-    color: #3486eb;
+    color: #4ceb34;
   }
   
   button {
-    background-color: #225ca3;
+    background-color: #868a88;
     border: 0;
     padding: 1%;
     color: white;
@@ -33,7 +33,7 @@
   }
   
   button:hover {
-    background-color: #3486eb;
+    background-color: rgb(218, 127, 42);
   }
   
   .post-list {
@@ -49,7 +49,7 @@
   
   textarea:focus, input:focus {
     outline: none;
-    border: 1px solid #3486eb;
+    border: 1px solid #ccc;
   }
   
   textarea {
@@ -75,15 +75,24 @@
   }
   
   header {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgb(4, 72, 43);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     padding: 0 1%;
+    background: rgb(4, 72, 43);
   }
   
   header h1 {
     font-size: 1em;
+    font-weight: 500;
+    color: rgb(4, 72, 43);
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #ccc;
+    cursor: pointer;
   }
   
   main {
@@ -92,12 +101,12 @@
   }
   
   .btn-no-style {
-    background: none;
+    background: #868a88;
     border: none;
     padding: 0;
     cursor: pointer;
     text-decoration: none;
-    color: #225ca3;
+    color: rgb(188, 228, 177);
     font-size: 100%;
     font-weight: bold;
     transition: color .1s;
@@ -106,15 +115,15 @@
   
   .btn-no-style:hover {
     background: none;
-    color: #3486eb;
+    color: rgb(218, 127, 42);
   }
   
   .delete-post-btn {
-    background-color: #d41414;
+    background-color: #868a88;
   }
   
   .delete-post-btn:hover {
-    background-color: #ff643d;
+    background-color: rgb(218, 127, 42);
   }
   
   .post {
@@ -128,15 +137,21 @@
     color: #7d7d7d;
   }
   
-  .update-link {
+  .update-content
+  .delete-content {
     display: block;
     margin: -1.5% 0 2% 0;
   }
   
+  .upvote-btn {
+    background-color: #197d0f;
+    transition: background-color .1s;
+  }
+  
+  .upvote-btn:hover {
+    background-color: #1f9c13;
+  }
 
-  
-  
-  
   .blog-form {
     margin-bottom: 5%;
   }
@@ -160,7 +175,7 @@
     width: 300px;
   }
   
-  .update-post-form {
+  .edit-post-form {
     margin-bottom: 5%;
   }
   
@@ -170,4 +185,12 @@
     justify-content: center;
     padding: 1%;
     font-size: 110%;
+  }
+
+  main div {
+    text-align: center;
+  }
+
+  .new-post-btn {
+    text-align: center;
   }

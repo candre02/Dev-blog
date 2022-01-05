@@ -7,21 +7,23 @@
       <input type="text" id="post-title" name="post-title" />
     </div>
     <div>
-      <label for="content">Link</label>
+      <label for="content">Content</label>
       <input id="content" name="content" />
     </div>
     <button type="submit" class="btn">Create</button>
   </form>
+  <button type="submit" class="new-post-btn">+ New Post</button>
 </section>
 
 {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>
+  <h2>Edit Posts</h2>
   <ol>
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
-      <a href="/dashboard/update/{{post.id}}" class="update-link">Update Post</a>
+      <a href="/dashboard/edit/{{post.id}}" class="edit-content">Update Post</a>
+      <a  data-id="{{post.id}}" class="delete-post-btn">Delete Post</a>
     </li>
     {{/each}}
   </ol>
@@ -29,3 +31,4 @@
 {{/if}}
 
 <script src="/js/new-post.js"></script>
+<script src="/js/delete-post.js"></script>

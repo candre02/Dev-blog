@@ -1,19 +1,22 @@
 <article>
   <a href="/dashboard"> &larr; Back to dashboard</a>
   <h2>
-    Update Post
+    Edit Post
   </h2>
-  <form class="update-post-form">
+  <form class="edit-post-form">
     <div>
-      <input name="post-title" type="text" value="{{post.title}}" />
-      <span>({{format_url post.content}})</span>
+      <label for="post-title">Title</label>
+      <input id="post-title" name="post-title" type="text" value="{{post.title}}" />
+      <label for="post-content">Content</label>
+      <input id="post-content" name="post-content" type="text" value="{{post.content}}" />
+      {{!-- <span>({{format_url post.content}})</span> --}}
     </div>
     <div>
       {{format_plural}} by you on {{format_date post.created_at}}
       |
       <a href="/post/{{post.id}}">{{post.blogs.length}} {{format_plural  post.blogs.length}}</a>
     </div>
-    <button type="submit">Submit</button>
+    <button type="submit">Update</button>
     <button type="button" class="delete-post-btn">Delete</button>
   </form>
 </article>
@@ -28,8 +31,8 @@
   </div>
 </form>
 
-{{> blogs post.blogs}}
+{{> blog post.blogs}}
 
-<script src="/js/update-post.js"></script>
+<script src="/js/edit-post.js"></script>
 <script src="/js/delete-post.js"></script>
 <script src="/js/blog-post.js"></script>
