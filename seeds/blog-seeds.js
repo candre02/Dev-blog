@@ -4,52 +4,52 @@ const { Blog } = require('../models');
 
 const blogdata = [
     {
-      blog_text: 'Very Informative, thank you for sharing :)',
+      blog_text: 'Nunc rhoncus dui vel sem.',
       user_id: 9,
       post_id: 6
     },
     {
-        blog_text: 'Rad!',
+        blog_text: 'Nunc rhoncus dui vel sem.',
         user_id: 7,
         post_id: 9
     },
     {
-        blog_text: 'Dope',
+        blog_text: 'Nunc rhoncus dui vel sem.',
         user_id: 4,
         post_id: 19
     },
     {
-        blog_text: 'We discussed this in class today!',
+        blog_text: 'Nunc rhoncus dui vel sem.',
         user_id: 10,
         post_id: 1
     },
     {
-        blog_text: 'This is great infomation :)',
+        blog_text: 'Nunc rhoncus dui vel sem.',
         user_id: 2,
         post_id: 19
     },
     {
-        blog_text: 'This is AMAZING, Thanks for sharing!',
+        blog_text: 'Nunc rhoncus dui vel sem.',
         user_id: 10,
         post_id: 1
     },
     {
-        blog_text: 'Wow!',
+        blog_text: 'Nunc rhoncus dui vel sem.',
         user_id: 10,
         post_id: 12
     },
     {
-        blog_text: 'Fire!',
+        blog_text: 'Nunc rhoncus dui vel sem.',
         user_id: 4,
         post_id: 6
     },
     {
-        blog_text: 'Neat',
+        blog_text: 'Nunc rhoncus dui vel sem.',
         user_id: 2,
         post_id: 11
     },
     {
-        blog_text: 'Pretty cool stuff!',
+        blog_text: 'Nunc rhoncus dui vel sem.',
         user_id: 10,
         post_id: 10
     }
