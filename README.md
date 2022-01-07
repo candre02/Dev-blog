@@ -19,6 +19,7 @@ In order for the application to be used, the user would need the command-line, m
 To perform tests, the user would need insomnia to check if all the routes functionality work properly.
 
 ## Images
+![Tech-blog-HP](https://user-images.githubusercontent.com/81876258/148612321-0c4ee3ee-0b60-49f3-93d5-4b1edec2bc48.png)
 
 
 
