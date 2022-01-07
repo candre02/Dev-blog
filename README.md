@@ -7,7 +7,7 @@
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
 ## Description
-<!-- This application allows the user to create, read, update, and delete (CRUD) on the related material routes. -->
+This app allows the user, to where a developer can publish their blog posts and comment on other developers’ posts as well.
 
 ## Installation
 The user would need to use the following dependencies to insatll this app, which are: mysql, sequelize, express-session, express-handlebars, bcrypt, connect-session-sequelize, express, handlebars, and dotenv.
