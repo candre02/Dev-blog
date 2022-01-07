@@ -15,22 +15,22 @@
     <nav>
         {{#if loggedIn}}
         <a href="/">Home</a>
-        <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
+        <a href="/dashboard">Dashboard</a>
+        <button id="logout" class="btn-no-style">Logout</button>
         {{else}}
         <a href="/">Home</a>
-        <a href="/dashboard">dashboard</a>
-        <a href="/logout">logout</a>
-        <a href="/login">login</a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
+        <a href="/login">Login</a>
         {{/if}}
     </nav>
     </header>
    <main>
       {{{ body }}}
     </main>
-     {{!-- <footer>
+     <footer>
       Thanks for visiting!
-    </footer> --}}
+    </footer>
     </div>
 
     {{#if loggedIn}}

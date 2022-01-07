@@ -9,12 +9,11 @@
       <input id="post-title" name="post-title" type="text" value="{{post.title}}" />
       <label for="post-content">Content</label>
       <input id="post-content" name="post-content" type="text" value="{{post.content}}" />
-      {{!-- <span>({{format_url post.content}})</span> --}}
     </div>
     <div>
-      {{format_plural}} by you on {{format_date post.created_at}}
+       {{user.username}} on {{format_date post.created_at}}
       |
-      <a href="/post/{{post.id}}">{{post.blogs.length}} {{format_plural  post.blogs.length}}</a>
+      <a href="/post/{{post.id}}">{{post.blogs.length}}</a>
     </div>
     <button type="submit">Update</button>
     <button type="button" class="delete-post-btn">Delete</button>
@@ -27,7 +26,7 @@
   </div>
 
   <div>
-    <button type="submit">add blog</button>
+    <button type="submit">Add Blog</button>
   </div>
 </form>
 
