@@ -237,7 +237,7 @@
    border-radius: 5px;
    cursor: pointer;
    box-shadow: 0px 4px 8px 0 rgb(98, 178, 179);
-   position:fixed;
+   position: relative;
    right: 30%;
  }
 
