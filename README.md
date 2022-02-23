@@ -1,9 +1,9 @@
-## Heroku Link
-https://tech-blogca.herokuapp.com/
-
 # Dev-blog
 
-## License
+### Depolyed Link
+[Click Here!](https://tech-blogca.herokuapp.com/)
+
+### License
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
 ## Description
@@ -18,10 +18,8 @@ In order for the application to be used, it’s used by navigating to the Heroku
 ## Tests
 none
 
-## Images
+### Image
 ![Tech-blog-HP](https://user-images.githubusercontent.com/81876258/148612321-0c4ee3ee-0b60-49f3-93d5-4b1edec2bc48.png)
-
-
 
 # Contact
 * Github: candre02
